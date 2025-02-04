@@ -1,4 +1,4 @@
-QT       += core gui widgets
+QT       -= core gui widgets
 
 TARGET = emulisa
 
@@ -8,11 +8,16 @@ INCLUDEPATH += .. . /home/me/Downloads/wx3.0.5-gtk/include/wx-3.0 /home/me/Downl
 
 DEFINES += _DEBUG __WXGTK__
 
+# ALLOW2MBRAM FULL2MBRAM ALLOWSERIALA IPC_COMMENTS IPC_COMMENT_REGS USE_RAW_BITMAP_ACCESS NO_RAW_BITMAP_ACCESS
+# DEBUG DEBUGMEMCALLS DEBUGLOG_ON_START TRACE
+
 QMAKE_CFLAGS += -std=c99
 
 QMAKE_CXXFLAGS += -Wno-reorder -Wno-unused-parameter -Wno-unused-function -Wno-unused-variable
 
 LIBS += -L/home/me/Downloads/wx3.0.5-gtk/lib -pthread   /home/me/Downloads/wx3.0.5-gtk/lib/libwx_gtk2u_qa-3.0.a /home/me/Downloads/wx3.0.5-gtk/lib/libwx_baseu_net-3.0.a /home/me/Downloads/wx3.0.5-gtk/lib/libwx_gtk2u_html-3.0.a /home/me/Downloads/wx3.0.5-gtk/lib/libwx_gtk2u_adv-3.0.a /home/me/Downloads/wx3.0.5-gtk/lib/libwx_gtk2u_core-3.0.a /home/me/Downloads/wx3.0.5-gtk/lib/libwx_baseu-3.0.a -pthread -lgthread-2.0 -lX11 -lXxf86vm -lSM -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lwxregexu-3.0 -lwxtiff-3.0 -lwxjpeg-3.0 -lwxpng-3.0 -lz -ldl -lm
+
+LIBS += -lSDL2
 
 HEADERS += \
     common.h \

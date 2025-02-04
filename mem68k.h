@@ -27,19 +27,6 @@
 *                                                                                      *
 \**************************************************************************************/
 
-
-
-//uint8 *(*mem68k_memptr[MAX_LISA_MFN]) (uint32 addr);
-//uint8 (*mem68k_fetch_byte[MAX_LISA_MFN]) (uint32 addr);
-//uint16 (*mem68k_fetch_word[MAX_LISA_MFN]) (uint32 addr);
-//uint32 (*mem68k_fetch_long[MAX_LISA_MFN]) (uint32 addr);
-//void (*mem68k_store_byte[MAX_LISA_MFN]) (uint32 addr, uint8 data);
-//void (*mem68k_store_word[MAX_LISA_MFN]) (uint32 addr, uint16 data);
-//void (*mem68k_store_long[MAX_LISA_MFN]) (uint32 addr, uint32 data);
-
-
-// fn protos
-
 uint8  *lisa_mptr_OxERROR(uint32 addr);
 uint8  lisa_rb_OxERROR(uint32 addr);
 uint16 lisa_rw_OxERROR(uint32 addr);
@@ -112,15 +99,6 @@ void   lisa_wb_Oxc000_flopmem(uint32 addr, uint8 data);
 void   lisa_ww_Oxc000_flopmem(uint32 addr, uint16 data);
 void   lisa_wl_Oxc000_flopmem(uint32 addr, uint32 data);
 
-/***
-uint8  *lisa_mptr_Oxd000_contrast(uint32 addr);
-uint8  lisa_rb_Oxd000_contrast(uint32 addr);
-uint16 lisa_rw_Oxd000_contrast(uint32 addr);
-uint32 lisa_rl_Oxd000_contrast(uint32 addr);
-void   lisa_wb_Oxd000_contrast(uint32 addr, uint8 data);
-void   lisa_ww_Oxd000_contrast(uint32 addr, uint16 data);
-void   lisa_wl_Oxd000_contrast(uint32 addr, uint32 data);
-****/
 uint8  *lisa_mptr_Oxd200_sccz8530(uint32 addr);
 uint8  lisa_rb_Oxd200_sccz8530(uint32 addr);
 uint16 lisa_rw_Oxd200_sccz8530(uint32 addr);
@@ -256,17 +234,3 @@ void   lisa_ww_vidram_parity(uint32 addr, uint16 data);
 void   lisa_wl_vidram_parity(uint32 addr, uint32 data);
 
 
-
-typedef enum {
-    mem_byte, mem_word, mem_long
-} t_memtype;
-
-int mem68k_init(void);
-
-//extern uint8 *(*mem68k_memptr[MAX_LISA_MFN]) (uint32 addr);
-//extern uint8 (*mem68k_fetch_byte[MAX_LISA_MFN]) (uint32 addr);
-//extern uint16 (*mem68k_fetch_word[MAX_LISA_MFN]) (uint32 addr);
-//extern uint32 (*mem68k_fetch_long[MAX_LISA_MFN]) (uint32 addr);
-//extern void (*mem68k_store_byte[MAX_LISA_MFN]) (uint32 addr, uint8 data);
-//extern void (*mem68k_store_word[MAX_LISA_MFN]) (uint32 addr, uint16 data);
-//extern void (*mem68k_store_long[MAX_LISA_MFN]) (uint32 addr, uint32 data);
